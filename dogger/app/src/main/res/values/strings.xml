@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Dogger</string>
     <string name="title_activity_maps">Map</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="dog_name">Dog name</string>
+    <string name="dog_race">Dog race</string>
+    <string name="text_dog_walk">At what time should the dog take a walk</string>
+    <string name="first_time">09:00 – 12:00</string>
+    <string name="second_time">12:00 – 15:00</string>
+    <string name="third_time">15:00 – 18:00</string>
+    <string name="fourth_time">18:00 – 21:00</string>
+    <string name="submit">Submit</string>
 </resources>
