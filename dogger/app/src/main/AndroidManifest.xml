@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dogger">
         <service
-            android:name=".data.ServiceAddDog"
+            android:name=".model.ServiceAddDog"
             android:enabled="true"
             android:exported="true" />
 
