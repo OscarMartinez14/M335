@@ -55,6 +55,7 @@ public class SensorActivity extends Activity implements SensorEventListener {
             sensorManager.registerListener(this, magneticField,
                     SensorManager.SENSOR_DELAY_NORMAL, SensorManager.SENSOR_DELAY_UI);
         }
+
     }
 
     @Override
@@ -90,5 +91,10 @@ public class SensorActivity extends Activity implements SensorEventListener {
         SensorManager.getOrientation(rotationMatrix, orientationAngles);
 
         // "orientationAngles" now has up-to-date information.
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
     }
 }
