@@ -32,6 +32,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 import ch.zli.dogger.R;
 
@@ -145,5 +152,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
 
+    }
+
+    public ArrayList getJson() throws IOException {
+        Gson gson = new Gson();
+        BufferedReader fileReader = new BufferedReader(new InputStreamReader(getAssets().open("workout_exercises.json")));
+        String line = fileReader.readLine();
+        String json = "";
+        while (line != null) {
+            json += line;
+            line = fileReader.readLine();
+        }
+        ArrayList locations;
+        locations = gson.fromJson(json, new TypeToken<ArrayList>() {
+        }.getType());
+        return locations;
     }
 }
