@@ -33,12 +33,14 @@ import ch.zli.dogger.R;
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    //Button addDog = findViewById(R.id.addDog);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        Button addDog = findViewById(R.id.addDog);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -46,7 +48,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         Intent i = new Intent(MapsActivity.this, AddDogActivity.class);
 
-        //addDog.setOnClickListener(v -> startActivity(i));
+        addDog.setOnClickListener(v -> startActivity(i));
+
     }
 
 

@@ -50,14 +50,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add Dog" />
+            android:text="@string/add_dog" />
 
         <Button
             android:id="@+id/showDog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Show Dog" />
+            android:text="@string/show_dog" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
