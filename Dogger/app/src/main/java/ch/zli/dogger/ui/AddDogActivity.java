@@ -15,13 +15,17 @@ import ch.zli.dogger.R;
 
 public class AddDogActivity extends AppCompatActivity {
 
+
+    // source: https://developer.android.com/guide/topics/sensors/sensors_position
+    private SensorManager sensorManager;
+    private Sensor sensor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_dog);
-        private SensorManager sensorManager;
-        private Sensor sensor;
 
+        // source: https://developer.android.com/guide/topics/sensors/sensors_position
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor = sensorManager.getDefaultSensor(Sensor.TYPE_GAME_ROTATION_VECTOR);
 
